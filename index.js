@@ -17,7 +17,7 @@ const JWT_SECRET = "your_secret_key";
 const allowedOrigins = [
   "http://localhost:5500", // ตัวอย่าง frontend URL ที่อนุญาต (แก้ตามจริง)
   "http://localhost:3000",
-  // "http://your-allowed-domain.com", // เพิ่ม domain ที่ต้องการอนุญาตได้
+  "https://happyevtaxi.com", // เพิ่ม domain ที่ต้องการอนุญาตได้
 ];
 
 // ตั้งค่า cors เพื่อเช็ค origin
@@ -41,10 +41,10 @@ app.use(
 app.use(bodyParser.json());
 
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "topon_Taweesak",
-  password: "Taweesak5050",
-  database: "topon_booking",
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
 });
 
 // DB_HOST=localhost
