@@ -47,12 +47,6 @@ const db = mysql.createConnection({
   database: process.env.DB_NAME,
 });
 
-// DB_HOST=localhost
-// DB_USER=topon_Taweesak
-// DB_PASS=Taweesak5050
-// DB_NAME=topon_booking
-// JWT_SECRET=your_secret_key
-
 db.connect((err) => {
   if (err) throw err;
   console.log("Connected to MySQL");
