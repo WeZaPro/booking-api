@@ -149,6 +149,10 @@ app.post("/api/bookings/search", authenticateToken, (req, res) => {
   });
 });
 
+app.get("/", (req, res) => {
+  res.send("API START");
+});
+
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
