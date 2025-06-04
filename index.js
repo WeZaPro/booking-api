@@ -41,15 +41,17 @@ app.use(
 app.use(bodyParser.json());
 
 const db = mysql.createConnection({
-  // host: "localhost",
-  // user: "root",
-  // password: "",
-  // database: "taxi_booking",
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME,
+  host: "localhost",
+  user: "topon_Taweesak",
+  password: "Taweesak5050",
+  database: "topon_booking",
 });
+
+// DB_HOST=localhost
+// DB_USER=topon_Taweesak
+// DB_PASS=Taweesak5050
+// DB_NAME=topon_booking
+// JWT_SECRET=your_secret_key
 
 db.connect((err) => {
   if (err) throw err;
